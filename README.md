@@ -1,4 +1,4 @@
-# GodotAudioEvents
+# Godot Audio Events
 A simple solution to generate events while playing a sound resource.
 
 Ever wanted to recreate the silly koopa dance that is timed with the music (BAH BAH)?
