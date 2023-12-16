@@ -2,8 +2,6 @@
 class_name AudioEventsStreamResource
 extends Resource
 
-
+@export var name : String = "Audio"
 @export var audio : AudioStream
 @export var eventTimes : Array[float]
-
-@export var name : String = "Audio"
