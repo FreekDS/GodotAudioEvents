@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://blmoi66kr60y"]
+
+[ext_resource type="Script" path="res://scripts/AudioStreamPlayerEvents.gd" id="1_n8knq"]
+[ext_resource type="Script" path="res://example/Node.gd" id="2_abyoc"]
+[ext_resource type="AudioStream" uid="uid://bocx2cwlpp1mc" path="res://example/freebird.wav" id="2_c08da"]
+[ext_resource type="Script" path="res://scripts/AudioFileWithEvents.gd" id="3_rdl2a"]
+
+[sub_resource type="Resource" id="Resource_2ro53"]
+script = ExtResource("3_rdl2a")
+audio = ExtResource("2_c08da")
+eventTimes = Array[float]([3.02, 6.96, 13.01])
+name = "Audio"
+
+[node name="AudioEventPlayer" type="Node" node_paths=PackedStringArray("audioStreamPlayer")]
+script = ExtResource("1_n8knq")
+audioStreamPlayer = NodePath("AudioStreamPlayer")
+audioEventStream = SubResource("Resource_2ro53")
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("2_abyoc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="soundEvent" from="." to="Node" method="_on_audio_event_player_sound_event"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
