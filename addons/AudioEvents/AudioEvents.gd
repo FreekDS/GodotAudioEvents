@@ -4,7 +4,7 @@ extends EditorPlugin
 
 const RESOURCE = preload("res://addons/AudioEvents/scripts/AudioFileWithEvents.gd")
 const NODE_TYPE = preload("res://addons/AudioEvents/scripts/AudioStreamPlayerEvents.gd")
-const ICON = preload("res://addons/AudioEventPlayer.svg")
+const ICON = preload("res://addons/AudioEvents/AudioEventPlayer.svg")
 
 const NODE_PARENT = "AudioStreamPlayer"
 const NODE_NAME = "AudioEventPlayer"

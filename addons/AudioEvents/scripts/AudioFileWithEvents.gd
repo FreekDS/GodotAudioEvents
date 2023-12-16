@@ -1,4 +1,4 @@
-@icon("res://addons/AudioEventPlayer.svg")
+@icon("res://addons/AudioEvents/AudioEventPlayer.svg")
 class_name AudioEventsStreamResource
 extends Resource
 ## Custom resource that manages an audio file together with an array of event times

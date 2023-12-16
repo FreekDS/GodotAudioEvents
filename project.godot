@@ -13,7 +13,7 @@ config_version=5
 config/name="Audio Events"
 run/main_scene="res://Example/example.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://addons/AudioEventPlayer.svg"
+config/icon="res://addons/AudioEvents/AudioEventPlayer.svg"
 
 [editor_plugins]
 

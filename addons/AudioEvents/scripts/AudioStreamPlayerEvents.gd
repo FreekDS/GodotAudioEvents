@@ -1,4 +1,4 @@
-@icon("res://AudioEventPlayer.svg")
+@icon("res://addons/AudioEvents/AudioEventPlayer.svg")
 extends Node
 ## The AudioEventPlayer node is used to manage audio with events.
 ##
