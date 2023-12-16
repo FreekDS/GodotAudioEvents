@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bocx2cwlpp1mc"
-path="res://.godot/imported/freebird.wav-15391728f6f0e2cab5d4ef86b5435e6d.sample"
+path="res://.godot/imported/freebird.wav-ad3a67fd25f82f593a9468da061c3157.sample"
 
 [deps]
 
-source_file="res://example/freebird.wav"
-dest_files=["res://.godot/imported/freebird.wav-15391728f6f0e2cab5d4ef86b5435e6d.sample"]
+source_file="res://Example/freebird.wav"
+dest_files=["res://.godot/imported/freebird.wav-ad3a67fd25f82f593a9468da061c3157.sample"]
 
 [params]
 

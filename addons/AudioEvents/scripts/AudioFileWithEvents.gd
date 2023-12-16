@@ -1,5 +1,5 @@
-@icon("res://AudioEventPlayer.svg")
-class_name AudioWithEvents
+@icon("res://addons/AudioEventPlayer.svg")
+class_name AudioEventsStreamResource
 extends Resource
 
 

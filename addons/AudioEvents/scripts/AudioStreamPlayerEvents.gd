@@ -1,11 +1,16 @@
 @icon("res://AudioEventPlayer.svg")
-class_name AudioEventPlayer
 extends Node
+## The AudioEventPlayer node is used to manage audio with events.
+##
+## Attach an AudioEventStream resource to the Audio Event Stream field and
+## Attach an audio stream player
+## If no stream player is attached, then the script will try to use the parent as
+## AudioStreamPlayer.
 
 const PRECISION = .01
 
 @export var audioStreamPlayer : AudioStreamPlayer
-@export var audioEventStream : AudioWithEvents
+@export var audioEventStream : AudioEventsStreamResource
 
 signal soundEvent(soundName: String, id: int, playedAt: float)
 
@@ -13,11 +18,17 @@ var lastId = -1
 
 func _ready():
 	var p = get_parent()
-	if audioEventStream:
-		audioStreamPlayer.stream = audioEventStream.audio
 	if p is AudioStreamPlayer:
 		audioStreamPlayer = p
-	audioStreamPlayer.play()
+	if audioStreamPlayer == null:
+		push_error("Please assign AudioStreamPlayer, or make sure the parent is one!")
+		assert(false)
+		
+	if audioEventStream:
+		audioStreamPlayer.stream = audioEventStream.audio
+		if audioStreamPlayer.autoplay:
+			audioStreamPlayer.play()
+	
 
 func _process(_delta):
 	if not audioStreamPlayer or not audioEventStream:
@@ -37,9 +48,4 @@ func _process(_delta):
 	
 	if index != -1 and lastId != index:
 		soundEvent.emit(audioEventStream.name, index, pos)
-		lastId = index
-
-
-func _on_audio_stream_player_finished():
-	print("finish machine reininger")
-	pass # Replace with function body.
+		lastId = index	# Avoid doubles
