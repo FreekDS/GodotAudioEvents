@@ -7,7 +7,17 @@ Ever wanted to recreate the silly koopa dance that is timed with the music (BAH 
 
 With this solution that is possible!
 
-### How to use?
+## Installation
+AudioEvents is available from the offical [asset library](https://godotengine.org/asset-library/asset/2431)!
+1. Open Godot
+2. Navigate to `AssetLib` on the top
+3. Search for `AudioEvents`
+4. Download!
+
+Alternatively, clone the repository and copy the `addons/AudioEvents` to your own `addons/` directory in the project.
+Do not forget to enable the plugin in the Project settings!
+
+## How to use?
 
 1. 	Create an `AudioEventPlayer`
 2. 	Attach an `AudioStreamPlayer`. (alternatively, add the `AudioEventPlayer` as child to the `AudioStreamPlayer`)
@@ -26,6 +36,10 @@ Open `example.tscn` for a simple example.
 
 <img src ="./doc/quick-example.gif" width=1000/>
 
+## Contributing
+If anything is not working, please open an issue via the issue tracker on GitHub.<br>
+Feel free to create a pull request with suggestions/bug fixes!
 
-### License
+
+## License
 This project is MIT licensed, you can do whatever you want with it :)
